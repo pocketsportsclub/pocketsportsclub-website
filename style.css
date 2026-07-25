@@ -30,8 +30,15 @@ img {
 /* HEADER */
 
 .site-header {
-    padding: 24px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 16px 5%;
+    background: rgba(255, 248, 238, 0.96);
+    border-bottom: 1px solid rgba(23, 60, 103, 0.08);
+    backdrop-filter: blur(10px);
 }
+
 
 .header-inner {
     width: min(1180px, 100%);
@@ -41,7 +48,30 @@ img {
     justify-content: space-between;
     gap: 24px;
 }
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+}
 
+.site-navigation {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    margin-left: auto;
+    margin-right: 32px;
+}
+
+.site-navigation a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.site-navigation a:hover {
+    color: var(--green);
+}
 .site-logo {
     width: 180px;
     height: auto;
@@ -88,9 +118,9 @@ img {
 
 .hero {
     width: min(1180px, 90%);
-    min-height: calc(100vh - 110px);
+    min-height: auto;
     margin: 0 auto;
-    padding: 50px 0 80px;
+    padding: 10px 0 80px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;

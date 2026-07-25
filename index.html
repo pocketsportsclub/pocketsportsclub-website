@@ -26,26 +26,34 @@
 
 <body>
 
-    <header class="site-header">
-        <div class="header-inner">
+    <header id="site-header" class="site-header">
+    <div class="header-inner">
 
-           <img
-    src="images/logo/logo.png"
-    alt="Pocket Sports Club"
-    class="site-logo"
->
-            
+        <a href="#hero" class="logo-link" aria-label="Pocket Sports Club homepage">
+            <img
+                src="images/logo/logo.png"
+                alt="Pocket Sports Club"
+                class="site-logo"
+            >
+        </a>
 
-            <a href="#" class="header-button">
-                Shop on Etsy
-            </a>
+        <nav class="site-navigation" aria-label="Main navigation">
+            <a href="#featured-workbook">The Workbook</a>
+            <a href="#meet-the-team">Meet the Team</a>
+            <a href="#coming-soon">More Sports</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-        </div>
-    </header>
+        <a href="#" class="header-button">
+            Shop the Football Workbook
+        </a>
+
+    </div>
+</header>
 
     <main>
 
-        <section class="hero">
+       <section id="hero" class="hero">
 
             <div class="hero-copy">
 
@@ -80,7 +88,7 @@
                     class="workbook-cover"
                 >
 
-                <div class="hero-characters">
+                <section id="meet-the-team" class="characters-section">
 
                     <img
                         src="images/characters/bongo.png"
