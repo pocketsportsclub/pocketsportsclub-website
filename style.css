@@ -349,11 +349,11 @@ h1 {
 /* MOBILE */
 
 @media (max-width: 768px) {
-.site-header {
-    position: static;
-    top: auto;
-    padding: 18px 20px;
-    backdrop-filter: none;
+    .site-header {
+        padding: 18px 20px;
+    }
+    .site-navigation {
+    display: none;
 }
 
 .header-inner {
@@ -379,7 +379,7 @@ h1 {
     .hero {
         width: 100%;
         min-height: auto;
-        padding: 40px 20px 28px;
+        padding: 40px 20px 64px;
         display: flex;
         flex-direction: column;
         gap: 42px;
@@ -433,7 +433,7 @@ h1 {
     .hero-visual {
         width: 100%;
         max-width: 420px;
-        min-height: auto;
+        min-height: 440px;
         margin: 0 auto;
         align-items: flex-start;
     }
@@ -528,7 +528,7 @@ h1 {
     }
 
     .hero-visual {
-        min-height: auto;
+        min-height: 400px;
     }
 
     .workbook-cover {
@@ -566,10 +566,10 @@ h1 {
     box-shadow: 0 14px 35px rgba(10, 38, 76, 0.14);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+}
 
 .workbook-preview-image:hover {
-    cursor: pointer;
-    transform: translateY(-4px) scale(1.02);
+    transform: translateY(-6px);
     box-shadow: 0 20px 45px rgba(10, 38, 76, 0.2);
 }
 
@@ -578,34 +578,21 @@ h1 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-.mobile-preview-prompt {
-    display: none;
-}
+
 @media (max-width: 560px) {
     .inside-workbook-section {
-        padding: 48px 20px 60px;
+        padding: 70px 20px;
     }
 
-    .inside-workbook-section .section-heading {
-        margin-bottom: 28px;
-    }
-.mobile-preview-prompt {
-    display: block;
-    margin: 0 0 18px;
-    text-align: center;
-    color: var(--green);
-    font-size: 14px;
-    font-weight: 700;
-}
     .workbook-preview-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        margin-top: 28px;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
-
-    .workbook-preview-image {
-        padding: 6px;
-        border-radius: 14px;
-        box-shadow: 0 8px 20px rgba(10, 38, 76, 0.12);
+}
+@media (max-width: 768px) {
+    .site-header {
+        position: static;
+        top: auto;
+        backdrop-filter: none;
     }
 }
