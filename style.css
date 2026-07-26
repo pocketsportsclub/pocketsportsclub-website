@@ -654,4 +654,43 @@ h1 {
         font-size: 28px;
     }
 }
+.parent-validation-section {
+    padding: 90px 5%;
+    background: var(--cream);
 }
+
+.validation-grid {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.validation-card {
+    padding: 34px;
+    background: var(--white);
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 14px 35px rgba(23, 60, 103, 0.1);
+}
+
+.validation-card h3 {
+    margin: 0 0 12px;
+    font-size: 24px;
+}
+
+.validation-card p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .parent-validation-section {
+        padding: 64px 20px;
+    }
+
+    .validation-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
