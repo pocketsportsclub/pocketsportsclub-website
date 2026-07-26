@@ -352,6 +352,14 @@ h1 {
     .site-header {
         padding: 18px 20px;
     }
+    .site-navigation {
+    display: none;
+}
+
+.header-inner {
+    width: 100%;
+    justify-content: space-between;
+}
 
     .header-inner {
         gap: 14px;
