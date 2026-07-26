@@ -581,3 +581,10 @@ h1 {
         gap: 20px;
     }
 }
+@media (max-width: 768px) {
+    .site-header {
+        position: static;
+        top: auto;
+        backdrop-filter: none;
+    }
+}
