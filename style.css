@@ -572,6 +572,10 @@ h1 {
     box-shadow: 0 20px 45px rgba(10, 38, 76, 0.2);
 }
 
+.mobile-preview-note {
+    display: none;
+}
+
 @media (max-width: 900px) {
     .workbook-preview-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -582,12 +586,38 @@ h1 {
     .inside-workbook-section {
         padding: 70px 20px;
     }
-
-    .workbook-preview-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
 }
+
+.workbook-preview-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 34px auto 0;
+}
+
+.workbook-preview-image:nth-child(n + 2) {
+    display: none;
+}
+
+.mobile-preview-note {
+    display: block;
+    max-width: 320px;
+    margin: 24px auto 0;
+    text-align: center;
+}
+
+.mobile-preview-note p {
+    margin: 0 0 6px;
+    color: var(--navy);
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.mobile-preview-note span {
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 600;
+}
+
 @media (max-width: 768px) {
     .site-header {
         position: static;
