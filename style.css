@@ -33,7 +33,7 @@ img {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 16px 5%;
+  padding: 8px 5%;
     background: rgba(255, 248, 238, 0.96);
     border-bottom: 1px solid rgba(23, 60, 103, 0.08);
     backdrop-filter: blur(10px);
@@ -65,7 +65,7 @@ img {
     color: var(--navy);
     text-decoration: none;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
     transition: color 0.2s ease;
 }
 
@@ -73,7 +73,7 @@ img {
     color: var(--green);
 }
 .site-logo {
-    width: 180px;
+    width: 165px;
     height: auto;
 }
 
@@ -90,10 +90,10 @@ img {
 }
 
 .header-button {
-    padding: 12px 22px;
+   padding: 10px 18px;
     background: var(--navy);
     color: var(--white);
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .header-button:hover {
@@ -120,7 +120,7 @@ img {
     width: min(1180px, 90%);
     min-height: auto;
     margin: 0 auto;
-    padding: 10px 0 40px;
+   padding: 50px 0 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -698,7 +698,7 @@ h1 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
     max-width: 1180px;
-    margin: 0 auto 46px;
+    margin: 0 auto;
 }
 
 .testimonial-card {
@@ -735,7 +735,7 @@ h1 {
 
 .perfect-for-strip {
     max-width: 1180px;
-    margin: 0 auto;
+    margin: 0 auto 56px;
     padding: 30px 34px;
     background: #17345c;
     border-radius: 26px;
