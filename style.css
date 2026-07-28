@@ -542,7 +542,11 @@ h1 {
     .hero-characters img:last-child {
         width: 96px;
     }
-}.inside-workbook-section {
+}./* ========================================
+   INSIDE THE WORKBOOK
+======================================== */
+
+.inside-workbook-section {
     padding: 90px 5%;
     background: #fffaf2;
 }
@@ -559,74 +563,72 @@ h1 {
 .workbook-preview-image {
     width: 100%;
     display: block;
-    box-sizing: border-box;
     padding: 10px;
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 14px 35px rgba(10, 38, 76, 0.14);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
 }
 
 .workbook-preview-image:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 45px rgba(10, 38, 76, 0.2);
+    box-shadow: 0 20px 45px rgba(10, 38, 76, 0.20);
 }
 
 .mobile-preview-note {
     display: none;
 }
 
+/* ---------- Tablet ---------- */
+
 @media (max-width: 900px) {
+
     .workbook-preview-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
+/* ---------- Mobile ---------- */
+
 @media (max-width: 560px) {
+
     .inside-workbook-section {
         padding: 70px 20px;
     }
-}
 
-.workbook-preview-grid {
-    grid-template-columns: 1fr;
-    max-width: 320px;
-    margin: 34px auto 0;
-}
-
-.workbook-preview-image:nth-child(n + 2) {
-    display: none;
-}
-
-.mobile-preview-note {
-    display: block;
-    max-width: 320px;
-    margin: 24px auto 0;
-    text-align: center;
-}
-
-.mobile-preview-note p {
-    margin: 0 0 6px;
-    color: var(--navy);
-    font-size: 17px;
-    font-weight: 800;
-}
-
-.mobile-preview-note span {
-    color: var(--green);
-    font-size: 14px;
-    font-weight: 600;
-}
-
-@media (max-width: 768px) {
-    .site-header {
-        position: static;
-        top: auto;
-        backdrop-filter: none;
+    .workbook-preview-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: 34px auto 0;
     }
-}
 
-.workbook-lightbox {
+    .workbook-preview-image:nth-child(n + 2) {
+        display: none;
+    }
+
+    .mobile-preview-note {
+        display: block;
+        max-width: 320px;
+        margin: 24px auto 0;
+        text-align: center;
+    }
+
+    .mobile-preview-note p {
+        margin: 0 0 6px;
+        color: var(--navy);
+        font-size: 17px;
+        font-weight: 800;
+    }
+
+    .mobile-preview-note span {
+        color: var(--green);
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+}.workbook-lightbox {
     position: fixed;
     inset: 0;
     z-index: 2000;
@@ -915,10 +917,10 @@ h1 {
 }
 
 .sport-character-area img {
-    width: 100%;
-    max-width: 180px;
-    max-height: 170px;
+    width: 180px;
+    height: 170px;
     object-fit: contain;
+    object-position: center bottom;
     display: block;
 }
 
