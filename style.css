@@ -1115,12 +1115,12 @@ h1 {
     }
 
     .hero-visual {
-        width: 100%;
-        max-width: 420px;
-        min-height: 360px;
-        margin: 0 auto;
-        align-items: flex-start;
-    }
+    width: 100%;
+    max-width: 420px;
+    min-height: 280px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
 
     .workbook-cover {
         width: min(270px, 68vw);
