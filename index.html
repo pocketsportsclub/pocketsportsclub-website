@@ -3,7 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Pocket Sports Club | Football Activity Book</title>
 
@@ -12,26 +16,284 @@
         content="Fun, screen-free football activity books for children aged 5–8, featuring Bongo and Whiz."
     >
 
-    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/icons/favicon.png"
+    >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+        /*
+        =========================================================
+        MAILERLITE EMAIL SIGNUP
+        Scoped here so it works without disturbing the wider site.
+        =========================================================
+        */
+
+        .email-signup-section {
+            padding: 72px 24px;
+            background-color: #f8f5ef;
+        }
+
+        .email-signup-inner {
+            width: min(1100px, 100%);
+            margin: 0 auto;
+            padding: 48px;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+            align-items: center;
+            gap: 56px;
+            background-color: #ffffff;
+            border: 2px solid rgba(11, 42, 91, 0.1);
+            border-radius: 28px;
+            box-shadow: 0 18px 45px rgba(11, 42, 91, 0.08);
+        }
+
+        .email-signup-copy {
+            min-width: 0;
+        }
+
+        .email-signup-copy .eyebrow {
+            margin: 0 0 10px;
+            color: #1e8e3e;
+            font-family: "Poppins", sans-serif;
+            font-size: 0.9rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .email-signup-copy h2 {
+            margin: 0 0 16px;
+            color: #0b2a5b;
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(2rem, 4vw, 3.25rem);
+            line-height: 1.08;
+        }
+
+        .email-signup-copy p:last-child {
+            max-width: 620px;
+            margin: 0;
+            color: #4b5563;
+            font-family: "Poppins", sans-serif;
+            font-size: 1rem;
+            line-height: 1.75;
+        }
+
+       .email-signup-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px;
+    background-color: #f8f5ef;
+    border: 2px solid rgba(11, 42, 91, 0.1);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+        }
+
+        .email-signup-form input[type="email"] {
+            width: 100%;
+            min-height: 58px;
+            margin: 0;
+            padding: 15px 18px;
+            color: #1f2937;
+            background-color: #ffffff;
+            border: 2px solid #d9dee5;
+            border-radius: 12px;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            font-size: 1rem;
+            outline: none;
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .email-signup-form input[type="email"]::placeholder {
+            color: #6b7280;
+            opacity: 1;
+        }
+
+        .email-signup-form input[type="email"]:focus {
+            border-color: #1e8e3e;
+            box-shadow: 0 0 0 4px rgba(30, 142, 62, 0.14);
+        }
+
+        .email-signup-form button {
+            width: 100%;
+            min-height: 56px;
+            margin: 0;
+            padding: 14px 22px;
+            color: #ffffff;
+            background-color: #1e8e3e;
+            border: 0;
+            border-radius: 12px;
+            font-family: "Poppins", sans-serif;
+            font-size: 1rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition:
+                background-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .email-signup-form button:hover {
+            background-color: #187735;
+            box-shadow: 0 10px 22px rgba(30, 142, 62, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .email-signup-form button:focus-visible {
+            outline: 3px solid #f5b700;
+            outline-offset: 3px;
+        }
+
+        .signup-privacy-note {
+            margin: 0;
+            color: #6b7280;
+            font-family: "Poppins", sans-serif;
+            font-size: 0.76rem;
+            line-height: 1.55;
+            text-align: center;
+        }
+
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+
+        /*
+        =========================================================
+        TABLET
+        =========================================================
+        */
+
+        @media (max-width: 900px) {
+            .email-signup-section {
+                padding: 56px 20px;
+            }
+
+            .email-signup-inner {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                padding: 40px;
+                text-align: center;
+            }
+
+            .email-signup-copy p:last-child {
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .email-signup-form {
+                width: min(520px, 100%);
+                margin: 0 auto;
+            }
+        }
+
+        /*
+        =========================================================
+        MOBILE
+        =========================================================
+        */
+
+        @media (max-width: 600px) {
+            .email-signup-section {
+                padding: 42px 16px;
+            }
+
+            .email-signup-inner {
+                gap: 26px;
+                padding: 30px 20px;
+                border-radius: 22px;
+            }
+
+            .email-signup-copy .eyebrow {
+                font-size: 0.78rem;
+            }
+
+            .email-signup-copy h2 {
+                margin-bottom: 14px;
+                font-size: clamp(1.85rem, 9vw, 2.45rem);
+            }
+
+            .email-signup-copy p:last-child {
+                font-size: 0.94rem;
+                line-height: 1.65;
+            }
+
+            .email-signup-form {
+    padding: 18px;
+    border-radius: 16px;
+}
+
+            .email-signup-form input[type="email"],
+            .email-signup-form button {
+                min-height: 54px;
+                font-size: 0.95rem;
+            }
+
+            .signup-privacy-note {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
 </head>
 
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2546571');
+</script>
+<!-- End MailerLite Universal -->
 <body>
 
-    <header id="site-header" class="site-header">
+    <header
+        id="site-header"
+        class="site-header"
+    >
 
         <div class="header-inner">
 
-            <a href="#hero" class="logo-link" aria-label="Pocket Sports Club homepage">
+            <a
+                href="#hero"
+                class="logo-link"
+                aria-label="Pocket Sports Club homepage"
+            >
 
                 <img
                     src="images/logo/logo.png"
@@ -41,17 +303,29 @@
 
             </a>
 
-            <nav class="site-navigation" aria-label="Main navigation">
+            <nav
+                class="site-navigation"
+                aria-label="Main navigation"
+            >
 
-                <a href="#featured-workbook">The Workbook</a>
+                <a href="#featured-workbook">
+                    The Workbook
+                </a>
 
-                <a href="#coming-soon">More Sports</a>
+                <a href="#coming-soon">
+                    More Sports
+                </a>
 
-                <a href="#contact">Contact</a>
+                <a href="#contact">
+                    Contact
+                </a>
 
             </nav>
 
-            <a href="#" class="header-button">
+            <a
+                href="#"
+                class="header-button"
+            >
                 Shop the Football Workbook
             </a>
 
@@ -61,7 +335,10 @@
 
     <main>
 
-        <section id="hero" class="hero">
+        <section
+            id="hero"
+            class="hero"
+        >
 
             <div class="hero-copy">
 
@@ -78,7 +355,10 @@
                     to help children play, learn and smile.
                 </p>
 
-                <a href="#" class="primary-button">
+                <a
+                    href="#"
+                    class="primary-button"
+                >
                     Shop the Football Workbook
                 </a>
 
@@ -100,7 +380,10 @@
 
         </section>
 
-        <section id="parent-validation" class="parent-validation-section">
+        <section
+            id="parent-validation"
+            class="parent-validation-section"
+        >
 
             <div class="section-heading">
 
@@ -129,33 +412,49 @@
 
                     <div class="perfect-for-item">
 
-                        <span aria-hidden="true">🍽️</span>
+                        <span aria-hidden="true">
+                            🍽️
+                        </span>
 
-                        <p>Meals out</p>
-
-                    </div>
-
-                    <div class="perfect-for-item">
-
-                        <span aria-hidden="true">🚗</span>
-
-                        <p>Car journeys</p>
+                        <p>
+                            Meals out
+                        </p>
 
                     </div>
 
                     <div class="perfect-for-item">
 
-                        <span aria-hidden="true">✈️</span>
+                        <span aria-hidden="true">
+                            🚗
+                        </span>
 
-                        <p>Travel and holidays</p>
+                        <p>
+                            Car journeys
+                        </p>
 
                     </div>
 
                     <div class="perfect-for-item">
 
-                        <span aria-hidden="true">🌧️</span>
+                        <span aria-hidden="true">
+                            ✈️
+                        </span>
 
-                        <p>Rainy afternoons</p>
+                        <p>
+                            Travel and holidays
+                        </p>
+
+                    </div>
+
+                    <div class="perfect-for-item">
+
+                        <span aria-hidden="true">
+                            🌧️
+                        </span>
+
+                        <p>
+                            Rainy afternoons
+                        </p>
 
                     </div>
 
@@ -167,14 +466,18 @@
 
                 <article class="testimonial-card">
 
-                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    <div
+                        class="testimonial-stars"
+                        aria-label="5 out of 5 stars"
+                    >
                         ★★★★★
                     </div>
 
                     <p class="testimonial-quote">
-                        “Perfect for cafés and restaurants. It kept our child happily entertained, giving us the chance to relax and enjoy our meal.”
+                        “Perfect for cafés and restaurants. It kept our child
+                        happily entertained, giving us the chance to relax and
+                        enjoy our meal.”
                     </p>
-
 
                     <p class="testimonial-author">
                         Parent of a 6-year-old
@@ -184,7 +487,10 @@
 
                 <article class="testimonial-card">
 
-                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    <div
+                        class="testimonial-stars"
+                        aria-label="5 out of 5 stars"
+                    >
                         ★★★★★
                     </div>
 
@@ -201,12 +507,16 @@
 
                 <article class="testimonial-card">
 
-                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    <div
+                        class="testimonial-stars"
+                        aria-label="5 out of 5 stars"
+                    >
                         ★★★★★
                     </div>
 
                     <p class="testimonial-quote">
-                        “Our children absolutely loved it! The activities were varied, fun and easy to follow. Would definitely recommend!”
+                        “Our children absolutely loved it! The activities were
+                        varied, fun and easy to follow. Would definitely recommend!”
                     </p>
 
                     <p class="testimonial-author">
@@ -219,7 +529,10 @@
 
         </section>
 
-        <section id="featured-workbook" class="inside-workbook-section">
+        <section
+            id="featured-workbook"
+            class="inside-workbook-section"
+        >
 
             <div class="section-heading">
 
@@ -284,7 +597,10 @@
 
         </section>
 
-        <section id="coming-soon" class="coming-soon-section">
+        <section
+            id="coming-soon"
+            class="coming-soon-section"
+        >
 
             <div class="coming-soon-heading">
 
@@ -316,7 +632,9 @@
 
                     </div>
 
-                    <h3>Football</h3>
+                    <h3>
+                        Football
+                    </h3>
 
                     <span class="sport-status available-now">
                         Available now
@@ -335,7 +653,9 @@
 
                     </div>
 
-                    <h3>Rugby</h3>
+                    <h3>
+                        Rugby
+                    </h3>
 
                     <span class="sport-status">
                         Coming soon
@@ -354,7 +674,9 @@
 
                     </div>
 
-                    <h3>Cricket</h3>
+                    <h3>
+                        Cricket
+                    </h3>
 
                     <span class="sport-status">
                         Coming soon
@@ -373,7 +695,9 @@
 
                     </div>
 
-                    <h3>Basketball</h3>
+                    <h3>
+                        Basketball
+                    </h3>
 
                     <span class="sport-status">
                         Coming soon
@@ -392,7 +716,9 @@
 
                     </div>
 
-                    <h3>Tennis</h3>
+                    <h3>
+                        Tennis
+                    </h3>
 
                     <span class="sport-status">
                         Coming soon
@@ -411,7 +737,9 @@
 
                     </div>
 
-                    <h3>Golf</h3>
+                    <h3>
+                        Golf
+                    </h3>
 
                     <span class="sport-status">
                         Coming soon
@@ -427,11 +755,16 @@
                     More sports. More adventures. More smiles.
                 </h3>
 
-                <a href="#" class="journey-button">
+                <a
+                    href="#"
+                    class="journey-button"
+                >
 
                     Shop the Football Workbook
 
-                    <span aria-hidden="true">→</span>
+                    <span aria-hidden="true">
+                        →
+                    </span>
 
                 </a>
 
@@ -439,7 +772,10 @@
 
         </section>
 
-        <section id="contact" class="contact-section">
+        <section
+            id="contact"
+            class="contact-section"
+        >
 
             <div class="contact-inner">
 
@@ -462,81 +798,88 @@
                 </div>
 
                 <form
-    class="contact-form"
-    action="https://formspree.io/f/xpqvberp"
-    method="POST"
->
+                    class="contact-form"
+                    action="https://formspree.io/f/xpqvberp"
+                    method="POST"
+                >
 
-    <div class="form-field">
+                    <div class="form-field">
 
-        <label for="contact-name">
-            Name
-        </label>
+                        <label for="contact-name">
+                            Name
+                        </label>
 
-        <input
-            type="text"
-            id="contact-name"
-            name="name"
-            autocomplete="name"
-            required
-        >
+                        <input
+                            type="text"
+                            id="contact-name"
+                            name="name"
+                            autocomplete="name"
+                            required
+                        >
 
-    </div>
+                    </div>
 
-    <div class="form-field">
+                    <div class="form-field">
 
-        <label for="contact-email">
-            Email address
-        </label>
+                        <label for="contact-email">
+                            Email address
+                        </label>
 
-        <input
-            type="email"
-            id="contact-email"
-            name="email"
-            autocomplete="email"
-            required
-        >
+                        <input
+                            type="email"
+                            id="contact-email"
+                            name="email"
+                            autocomplete="email"
+                            required
+                        >
 
-    </div>
+                    </div>
 
-    <div class="form-field">
+                    <div class="form-field">
 
-        <label for="contact-message">
-            Message
-        </label>
+                        <label for="contact-message">
+                            Message
+                        </label>
 
-        <textarea
-            id="contact-message"
-            name="message"
-            rows="6"
-            required
-        ></textarea>
+                        <textarea
+                            id="contact-message"
+                            name="message"
+                            rows="6"
+                            required
+                        ></textarea>
 
-    </div>
+                    </div>
 
-    <input
-        type="hidden"
-        name="_subject"
-        value="New Pocket Sports Club Website Enquiry"
-    >
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Pocket Sports Club Website Enquiry"
+                    >
 
-    <button type="submit" class="contact-submit-button">
-        Send Message
-    </button>
+                    <button
+                        type="submit"
+                        class="contact-submit-button"
+                    >
+                        Send Message
+                    </button>
 
-</form>
+                </form>
+
             </div>
 
         </section>
 
-        <section id="email-signup" class="email-signup-section">
+        <section
+            id="email-signup"
+            class="email-signup-section"
+        >
 
             <div class="email-signup-inner">
 
                 <div class="email-signup-copy">
 
                     <p class="eyebrow">
-                        Join the club
+                        Join the Club
                     </p>
 
                     <h2>
@@ -544,34 +887,53 @@
                     </h2>
 
                     <p>
-                        Hear about new activity books, free printables and
-                        occasional Pocket Sports Club updates.
+                        Get free printable activities, exclusive offers and be the
+                        first to hear about new Pocket Sports Club releases.
                     </p>
 
                 </div>
 
-                <form
-                    class="email-signup-form"
-                    action="#"
-                    method="post"
+                <div class="ml-embedded" data-form="DrxGiP"></div>
                 >
 
-                    <label for="signup-email" class="visually-hidden">
+                    <label
+                        for="signup-email"
+                        class="visually-hidden"
+                    >
                         Email address
                     </label>
 
                     <input
                         type="email"
                         id="signup-email"
-                        name="email"
+                        name="fields[email]"
                         placeholder="Enter your email address"
                         autocomplete="email"
+                        aria-label="Email address"
+                        aria-required="true"
                         required
+                    >
+
+                    <input
+                        type="hidden"
+                        name="ml-submit"
+                        value="1"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="anticsrf"
+                        value="true"
                     >
 
                     <button type="submit">
                         Join the Club
                     </button>
+
+                    <p class="signup-privacy-note">
+                        Occasional Pocket Sports Club updates only. Unsubscribe
+                        at any time.
+                    </p>
 
                 </form>
 
@@ -581,11 +943,18 @@
 
     </main>
 
-    <footer id="site-footer" class="site-footer">
+    <footer
+        id="site-footer"
+        class="site-footer"
+    >
 
         <div class="footer-inner">
 
-            <a href="#hero" class="footer-logo-link" aria-label="Return to homepage">
+            <a
+                href="#hero"
+                class="footer-logo-link"
+                aria-label="Return to homepage"
+            >
 
                 <img
                     src="images/logo/logo.png"
@@ -607,6 +976,10 @@
 
                 <a href="#contact">
                     Contact
+                </a>
+
+                <a href="#email-signup">
+                    Join the Club
                 </a>
 
             </div>
